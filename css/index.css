@@ -63,10 +63,10 @@ header nav ul {
 
 header ul li {
     display: inline-block;
-    transition: color .3s ease;
+    margin: 0 0 10px 25px;
 }
-header nav li:hover {
-    color: #d12727;
+header nav li:first-child {
+    margin: 0;
 }
 
 header nav a {
@@ -76,11 +76,9 @@ header nav a {
     font-size: 1.3rem;
     letter-spacing: 0.31rem;
     display: inline-block;
-    margin: 0 0 10px 25px;
+    transition: color .3s ease;
 }
-header nav a:first-child {
-    margin: 0;
-}
+header nav a:hover { color: #d12727; }
 
 header .main {
     height: 100%;
@@ -187,8 +185,6 @@ header .main-food .price-tag p {
 }
 
 .try-it-today .img-bigger {
-    /* width: 100%;
-    height: 100%; */
     border: none;
     border-radius: 10px;
     font-family: 'Bebas Neue', cursive;
@@ -203,6 +199,8 @@ header .main-food .price-tag p {
     font-family: 'Bebas Neue', cursive;
     position: relative;
 }
+
+.try-it-today img { width: 100%; }
 
 .try-it-today .img-block { transition: all .3s ease; }
 
@@ -291,12 +289,14 @@ header .main-food .price-tag p {
 }
 
 .choose-and-enjoy .burger-box {
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
 }
+
+.choose-and-enjoy img { width: 100%; }
+.choose-and-enjoy .burger-grid .burger-box:nth-child(2) img { width: 90%; }
 
 .choose-and-enjoy .burger-box h2 {
     font-size: 2.5rem;
@@ -318,7 +318,6 @@ header .main-food .price-tag p {
     transition: all .5s ease;
 }
 
-/* Probaaa */
 .choose-and-enjoy .burger-box button:hover {
     box-shadow: 0px 2px 28px -6px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 2px 28px -6px rgba(0,0,0,0.75);
@@ -416,6 +415,7 @@ header .main-food .price-tag p {
 }
 .upcoming-events .text .dot:first-child { background-color: #FFC045; }
 
+.upcoming-events img { width: 100%; }
 
 
 
