@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+* {
+    box-sizing: border-box;
+    color: #3D2514
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/bg-img.PNG);
+    background-size: cover;
+    padding: 40px 60px;
+}
+
+header .container {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+header .logo-and-nav {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+header .logo-and-nav img {
+    max-width: 16.4rem;
+    max-height: 3.6rem;
+}
+
+header .logo-and-nav i {
+    font-size: 2rem !important;
+    margin-right: 10px;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header nav p {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    text-align: right;
+}
+
+header ul li {
+    display: inline-block;
+    transition: color .3s ease;
+}
+header nav li:hover {
+    color: #d12727;
+}
+
+header nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.3rem;
+    letter-spacing: 0.31rem;
+    display: inline-block;
+    margin: 0 0 10px 25px;
+}
+header nav a:first-child {
+    margin: 0;
+}
+
+header .main {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+header .main-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+header .main-title p {
+    margin: 0;
+    margin-top: 7px;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: lighter;
+    padding: 5px 16px;
+    font-size: 1.5rem;
+}
+
+header .main-title p i { font-size: 1.2rem; }
+
+header .main-title h1 {
+    margin: 0;
+    margin-bottom: 1rem;
+    font-family: 'Alfa Slab One', cursive;
+    text-transform: uppercase;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    font-size: 4rem;
+    line-height: 4rem;
+    text-shadow: 2px 2px #ffffff;
+}
+
+.main .main-food form {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main form input,
+.main form textarea {
+    border: none;
+    border-radius: 10px;
+    padding: 0.8rem 1rem;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    border-bottom: 3px solid #ffffff;
+    resize: none;
+    outline: none;
+    transition: all .5s ease;
+}
+.main form input:focus,
+.main form textarea:focus {
+    border-bottom: 3px solid #3D2514;
+}
+
+.main form input[type="submit"] {
+    padding: 0.8rem 5rem;
+    cursor: pointer;
+    letter-spacing: 1px;
+    background-color: #efefef;
+    border-bottom: 3px solid #efefef;
+}
+.main form input[type="submit"]:hover {
+    background-color: #BF2222;
+    color: #ffffff;
+}
+
+.main form input::placeholder,
+.main form textarea::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-family: 'Montserrat', sans-serif;
+    opacity: 1; /* Firefox */
+}
+  
+.main form input:-ms-input-placeholder,
+.main form textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main form input::-ms-input-placeholder,
+.main form textarea::-ms-input-placeholder { /* Microsoft Edge */
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+@media only screen and (max-width: 600px) {
+    html { font-size: 10px; }
+    header { padding: 0; }
+    header .logo-and-nav { grid-template-rows: 0.5fr 0; }
+}
+
+@media only screen and (max-width: 850px) {
+    header .logo-and-nav { 
+        grid-template-columns: 1fr; 
+        align-items: center; 
+        justify-items: center; 
+    }
+    header nav { align-items: center; }
+    .main form .button-container { text-align: center; }
+}
+
+@media only screen and (max-width: 1270px) {
+    header { height: auto; }
+    header .container { height: auto; }
+    header .main { grid-template-columns: 1fr; }
+    header .main-title { align-items: center; }
+}
