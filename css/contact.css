@@ -63,10 +63,10 @@ header nav ul {
 
 header ul li {
     display: inline-block;
-    transition: color .3s ease;
+    margin: 0 0 10px 25px;
 }
-header nav li:hover {
-    color: #d12727;
+header nav li:first-child {
+    margin: 0;
 }
 
 header nav a {
@@ -76,10 +76,10 @@ header nav a {
     font-size: 1.3rem;
     letter-spacing: 0.31rem;
     display: inline-block;
-    margin: 0 0 10px 25px;
+    transition: color .3s ease;
 }
-header nav a:first-child {
-    margin: 0;
+header nav a:hover {
+    color: #d12727;
 }
 
 header .main {
