@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+* {
+    box-sizing: border-box;
+    color: #3D2514
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    background-image: url(../images/bg-img.PNG);
+    background-size: cover;
+    padding: 10px 60px;
+}
+
+header .logo-and-nav {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+header .logo-and-nav img {
+    max-width: 16.4rem;
+    max-height: 3.6rem;
+    align-self: center;
+}
+
+header .logo-and-nav i {
+    font-size: 2rem !important;
+    margin-right: 10px;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header nav p {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    text-align: right;
+}
+
+header ul li {
+    display: inline-block;
+    transition: color .3s ease;
+}
+header nav li:hover {
+    color: #d12727;
+}
+
+header nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.3rem;
+    letter-spacing: 0.31rem;
+    display: inline-block;
+    margin: 0 0 10px 25px;
+}
+header nav a:first-child {
+    margin: 0;
+}
+
+.best-offer {
+    width: 100%;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    margin-top: 5rem;
+}
+
+.best-offer span {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFC045;
+    margin: auto;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.best-offer h2, .menu h2 {
+    font-size: 3rem;
+    margin: 0;
+    margin-bottom: 4rem;
+    letter-spacing: 0.1rem;    
+    font-family: 'Alfa Slab One', cursive;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+.best-offer p {
+    font-family: 'Montserrat', sans-serif;
+    width: 70%;
+    margin: auto;
+    line-height: 1.6;
+}
+
+.best-offer .offer-grid {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1rem;
+}
+
+.best-offer .offer-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.best-offer .offer-box h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.best-offer .offer-box button {
+    color: #ffffff;
+    background-color: #BF2222;
+    padding: 18px 40px;
+    font-size: 1rem;
+    font-family: 'Alfa Slab One', cursive;
+    text-transform: uppercase;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+.best-offer .offer-box button:hover {
+    box-shadow: 0px 2px 28px -6px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 2px 28px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 28px -6px rgba(0,0,0,0.75);
+}
+
+.best-offer button .line,
+.best-offer button .line-2 {
+    width: 25px;
+    height: 100px;
+    background-color: rgb(223, 223, 223);
+    position: absolute;
+    top: -10px;
+    left: -40px;
+    opacity: 0.5;
+    transform: rotate(20deg);
+}
+.best-offer button .line-2 {
+    width: 10px;
+    left: -45px;
+}
+
+.best-offer button:hover .line {
+    transition: all 1s ease;
+    left: 210px;
+}
+.best-offer button:hover .line-2 {
+    transition: all 1s ease .05s;
+    left: 200px;
+}
+
+.menu {
+    width: 100%;
+    padding: 3rem 0;
+    margin-bottom: 5rem;
+    background-image: url(../images/bg-img.PNG);
+}
+
+.menu .container {
+    max-width: 75%;
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+}
+
+.menu .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.menu .menu-grid .item {
+    padding: 0.8rem 1rem;
+    text-align: left;
+}
+
+.menu .menu-grid .name-price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-weight: bolder;
+}
+
+.menu .menu-grid .description {
+    max-width: 85%;
+    font-size: 0.8rem;
+}
+
+.menu .menu-grid hr { opacity: 0.3; }
+
+.menu .menu-grid .item:hover .name-price,
+.menu .menu-grid .item:hover .description { 
+    padding-left: 5px; 
+    transition: all .3s ease;
+}
+.menu .menu-grid .item:hover hr { opacity: 1; }
+
+
+@media only screen and (max-width: 600px) {
+    html { font-size: 10px; }
+    header { padding-left: 0; padding-right: 0; }
+    .best-offer h2 { font-size: 2.5rem; }
+    .best-offer .offer-grid { padding: 20px; }
+    .menu .menu-grid { grid-template-columns: 1fr; }
+}
+
+@media only screen and (max-width: 800px) {
+    header .logo-and-nav { 
+        grid-template-columns: 1fr; 
+        align-items: center; 
+        justify-items: center; 
+    }
+    header nav { align-items: center; }
+    .best-offer .offer-grid {
+        grid-template-columns: 1fr;
+        grid-row-gap: 10rem;
+    }
+    .menu .container { max-width: 90%; }
+}
+
+
+p.headline2 {
+    font-family: "Bebas Neue";
+    text-align: center;
+    font-size: 1.4rem;
+    color: #3D2514;
+    margin-bottom: 0;
+}
+
+p.headline1 {
+    margin-top: 0;
+    font-family: "Alfa Slab One";
+    font-size: 3rem;
+    text-align: center;
+    color: #3D2514;
+}
+
+form {
+    width: 74%;
+    box-sizing: border-box;
+    float: left;
+    margin-left: 6%;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.row {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .left_col {
+      width: 49%;
+      margin-right: 1%;
+      float: left;
+      box-sizing: border-box;
+  }
+
+  .right_col {
+    width: 49%;
+    margin-left: 1%;
+    float: left;
+    box-sizing: border-box;
+  }
+
+  .row input[type='text'] {
+      padding: 1.1rem;
+      border-radius: 0.25rem;
+      width: 100%;
+      border: solid 1px gainsboro;
+      font-size: 1.25rem;
+      font-family: "Alfa Slab One", cursive;
+  }
+
+ .row input[type="submit"] {
+    padding: 1.1rem;
+    color: white;
+    border-radius: 0.25rem;
+    width: 100%;
+    background-color: #BF2222;
+    font-size: 1.25rem;
+    border: none;
+    font-family: "Alfa Slab One";
+ }
+
+ .form_part {
+     position: relative;
+     padding-top: 0.25rem;
+     width: 100%;
+     padding-bottom: 10rem;
+     margin-bottom: 1.25rem;
+     overflow: hidden;
+ }
+
+ .form_part::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  form {
+      margin-top: 1.1em;
+  }
+
+.burger {
+    position: absolute; 
+    top: 0px; 
+    left: -20px;
+    width: 1.25rem;
+} 
+
+.burger-fries {
+    position: absolute; 
+    bottom: 0rem;
+    right: 15rem;
+    width: 2.5rem;
+}
+
+
+.bottle {
+    float: left;
+    width: 2.5rem;
+    margin-right: 6%;
+}
+
+.form-pic {
+    margin: auto;
+    width: 70%;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.form-pic::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .footer {
+      box-sizing: border-box;
+      width: 93%;
+      margin: auto;
+      background-image: url("../images/footer/background_footer.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding-top: 5rem;
+      padding-left: 2.5rem;
+      padding-bottom: 2rem;
+      padding-right: 2rem;
+      font-size: 1.1rem;
+      font-family: "Bebas Neue";
+      color: white;
+      margin-bottom: 2rem;
+      position: relative;
+      overflow-x: hidden;
+  }
+
+  .footer-row {
+      width: 100%;
+      margin-bottom: 15rem;
+  }
+
+  .footer-row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .footer-col-left {
+      width: 69%;
+      float: left;
+      margin-top: 2rem;
+  }
+  
+  .footer p {
+      width: 50%;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.6;
+  }
+
+  .footer-col-right {
+      width: 31%;
+      float: left;
+      margin-top: 4rem;
+  }
+
+  .footer span {
+      display: block;
+      float: left;
+      margin-top: 0.6rem;
+      color: white;
+  }
+
+  .footer-col-right img{
+      margin-right: 1.1rem;
+      display: block;
+      float: left;
+  }
+
+  .footer-col-right-cont {
+    margin-bottom: 0.8rem;
+  }
+
+  .footer-col-right-cont::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .footer-row-two {
+    position: absolute; 
+    bottom: 2rem; 
+    left: 2.5rem;
+    width: 100%;
+  }
+
+  .footer-col-left-two {
+    width: 49%;
+    float: left;
+  }
+
+  .footer-col-right-two {
+      width: 46%;
+      float: right;
+      margin-right: 2.5rem;
+  }
+
+  .footer-col-right-two img{
+    margin-right: 1.1rem;
+    display: block;
+    float: right;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 5px;
+    }
+    .left_col {
+        width: 100%;
+        margin-right: 0;
+    }
+    .right_col {
+        width: 100%;
+        margin-left: 0;
+    }
+    .bottle {
+        display: none;
+    }
+    .footer {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0.8rem;
+    }
+    .footer-row-two {
+        bottom: 0.8rem;
+        left: 0.8rem;
+    }
+    
+    .footer p {
+        width: 100%;
+    }
+
+    .burger-house img{
+        width: 100%;
+    }
+
+    .footer-col-right-two {
+        margin-right: 1.25rem;
+    }
+
+    .footer-col-right-two img{
+        margin-right: 0.25rem;
+        display: block;
+        float: right;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    html {
+        font-size: 7px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .bottle {
+        visibility: hidden;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .burger {
+        display: none;
+    }
+    .burger-fries {
+        display: none;
+    }
+    .bottle {
+        display: none;
+    }
+    form {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (min-width: 2560px) {
+    html {
+        font-size: 16px;
+    }
+}
